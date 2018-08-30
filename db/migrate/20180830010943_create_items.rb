@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :name
       t.float :price
       t.boolean :in_stock
-      t.belongs_to :lists, foreign_key: true
+      t.belongs_to :list, foreign_key: true
 
       t.timestamps
     end

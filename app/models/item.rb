@@ -1,13 +1,13 @@
 class Item < ApplicationRecord
   belongs_to :list
    
-  before_create :put_item_in_stock
+  # before_create :put_item_in_stock
  
 
-  private
+  # private
  
-  def put_item_in_stock
-    self.in_stock = true
-  end
+  # def put_item_in_stock
+  #   self.in_stock = true
+  # end
  
 end

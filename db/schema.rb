@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2018_08_30_010943) do
     t.string "name"
     t.float "price"
     t.boolean "in_stock"
-    t.bigint "lists_id"
+    t.bigint "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["lists_id"], name: "index_items_on_lists_id"
+    t.index ["list_id"], name: "index_items_on_lists_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_010943) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "items", "lists", column: "lists_id"
+  add_foreign_key "items", "lists"
   add_foreign_key "lists", "stores"
 end
